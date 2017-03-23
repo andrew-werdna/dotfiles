@@ -93,9 +93,22 @@ noremap   <Right>  <NOP>
 xnoremap <  <gv
 xnoremap >  >gv
 
+" windows & tabs & buffers
+map <leader>wv :vsplit <CR>
+map <leader>ws :split <CR>
+map <leader>tn :tabnew <CR>
+map <leader>tc :tabclose <CR>
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <leader>bd :Bclose <CR>
+
+
 "
 " NERDTree
 "
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
+
 
