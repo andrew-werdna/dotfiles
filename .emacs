@@ -1,21 +1,31 @@
 (require 'package)
 
-(setq package-list '(evil evil-leader))
 
-(setq package-archives '(("melpa-stable" . "https://stable.melpa.org/packages/")
-                                                 ("org" . "http://orgmode.org/elpa/") 
-                                                                           ("marmalade" . "http://marmalade-repo.org/packages/")))
-(package-initialize)
+(add-to-list 'package-archives
+                  '("melpa" . "http://melpa.org/packages/") t)
 
-; fetch the list of packages available 
+(add-to-list 'package-archives
+                  '("org" . "http://orgmode.org/elpa/") t)
+
+(add-to-list 'package-archives
+                  '("marmalade" . "http://marmalade-repo.org/packages/") t)
+
 (unless package-archive-contents
     (package-refresh-contents))
 
-; install the missing packages
-(dolist (package package-list)
-    (unless (package-installed-p package)
-          (package-install package)))
+(package-initialize)
 
+(defvar package-list
+    '(evil 
+      evil-leader))
+
+(dolist (p package-list)
+    (when (not (package-installed-p p))
+               (package-install p)))
+
+
+(setq inhibit-startup-message t) ;; Hide startup mesage
+(global-linum-mode t) ;; Line numbers
 
 (global-evil-leader-mode)
 
