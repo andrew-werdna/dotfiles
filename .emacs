@@ -16,7 +16,7 @@
 (package-initialize)
 
 (defvar package-list
-    '(evil 
+    '(evil
       evil-leader
       neotree))
 
@@ -33,6 +33,13 @@
 (evil-mode 1)
 
 (global-set-key [f8] 'neotree-toggle)
+
+(evil-define-key 'normal neotree-mode-map (kbd "TAB") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "SPC") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
+(evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
+(evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
