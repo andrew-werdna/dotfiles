@@ -41,6 +41,7 @@
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
 (evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)
+(setq neo-smart-open t)
 
 (global-set-key (kbd "C-x g") 'magit-status)
 
