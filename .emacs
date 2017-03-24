@@ -18,7 +18,8 @@
 (defvar package-list
     '(evil
       evil-leader
-      neotree))
+      neotree
+      magit))
 
 (dolist (p package-list)
     (when (not (package-installed-p p))
@@ -39,6 +40,9 @@
 (evil-define-key 'normal neotree-mode-map (kbd "q") 'neotree-hide)
 (evil-define-key 'normal neotree-mode-map (kbd "RET") 'neotree-enter)
 (evil-define-key 'normal neotree-mode-map (kbd "g") 'neotree-refresh)
+(evil-define-key 'normal neotree-mode-map (kbd "H") 'neotree-hidden-file-toggle)
+
+(global-set-key (kbd "C-x g") 'magit-status)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
