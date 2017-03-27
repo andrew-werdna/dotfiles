@@ -23,4 +23,6 @@ apt-get install -y \
     ca-certificates \
     tmux \
     rsync \
-    build-essential
+    build-essential \
+    vim-nox \
+    exuberant-ctags
