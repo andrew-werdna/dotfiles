@@ -69,6 +69,9 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
+  Plug 'vim-syntastic/syntastic'
+  Plug 'ctrlpvim/ctrlp.vim'
+  Plug 'mattn/emmet-vim'
 
 call plug#end()
 
@@ -111,4 +114,20 @@ map <leader>bd :Bclose <CR>
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
 
+
+"
+" Syntastic
+"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_php_checkers = ['php', 'phplint', 'phpmd']
+let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_javascript_checkers = ['jshint']
 
