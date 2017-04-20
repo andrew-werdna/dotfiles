@@ -26,6 +26,7 @@ set ignorecase
 set noswapfile
 set t_Co=256
 set background=dark
+set autoread
 
 set shell=/bin/bash
 
@@ -72,6 +73,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-syntastic/syntastic'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
+  Plug 'easymotion/vim-easymotion'
+  Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -81,7 +84,7 @@ call plug#end()
 "
 let mapleader = ";"
 let g:mapleader = ";"
-
+map <F7> :checktime<CR>
 
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
