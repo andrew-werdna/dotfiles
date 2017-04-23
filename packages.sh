@@ -7,7 +7,7 @@
 #     (e.g. man, git, less, wget, tmux, .etc)
 #     are commonly used to get things done and are often missing from a base Docker image
 
-apt-get install -y \
+apt install -y \
     curl \
     man \
     git \
