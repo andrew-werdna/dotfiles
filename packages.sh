@@ -8,6 +8,10 @@
 #     are commonly used to get things done and are often missing from a base Docker image
 
 apt install -y \
+    apt-utils \
+    ssh \
+    gcc \
+    make \
     curl \
     man \
     git \
@@ -21,8 +25,5 @@ apt install -y \
     apt-transport-https \
     lsb-release \
     ca-certificates \
-    tmux \
     rsync \
-    build-essential \
-    vim-nox \
-    exuberant-ctags
+    build-essential
