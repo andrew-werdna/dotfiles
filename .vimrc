@@ -7,9 +7,8 @@ set showcmd
 set showmode
 set incsearch
 set hlsearch
-set cursorline
 
-set history=300
+set history=500
 set scrolloff=3
 set expandtab
 set tabstop=2
@@ -70,14 +69,11 @@ call plug#begin('~/.vim/plugged')
 
   Plug 'scrooloose/nerdtree'
   Plug 'itchyny/lightline.vim'
-  Plug 'vim-syntastic/syntastic'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
   Plug 'easymotion/vim-easymotion'
-  Plug 'tpope/vim-fugitive'
 
 call plug#end()
-
 
 "
 " Re-mappings
@@ -85,15 +81,6 @@ call plug#end()
 let mapleader = ";"
 let g:mapleader = ";"
 map <F7> :checktime<CR>
-
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
 
 " Don't lose selection when shifting sideways
 xnoremap <  <gv
@@ -110,27 +97,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <leader>bd :Bclose <CR>
 
-
 "
 " NERDTree
 "
 map <leader>nn :NERDTreeToggle<cr>
 map <leader>nf :NERDTreeFind<cr>
-
-
-"
-" Syntastic
-"
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_php_checkers = ['php', 'phplint', 'phpmd']
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_javascript_checkers = ['jshint']
-
