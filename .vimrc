@@ -7,8 +7,9 @@ set showcmd
 set showmode
 set incsearch
 set hlsearch
+set cursorline
 
-set history=500
+set history=300
 set scrolloff=3
 set expandtab
 set tabstop=2
@@ -71,9 +72,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'mattn/emmet-vim'
+  Plug 'wesQ3/vim-windowswap'
   Plug 'easymotion/vim-easymotion'
 
 call plug#end()
+
 
 "
 " Re-mappings
@@ -81,6 +84,16 @@ call plug#end()
 let mapleader = ";"
 let g:mapleader = ";"
 map <F7> :checktime<CR>
+
+
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
 " Don't lose selection when shifting sideways
 xnoremap <  <gv
@@ -91,11 +104,14 @@ map <leader>wv :vsplit <CR>
 map <leader>ws :split <CR>
 map <leader>tn :tabnew <CR>
 map <leader>tc :tabclose <CR>
+map <leader>tf :tabn <CR>
+map <leader>tp :tabp <CR>
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map <leader>bd :Bclose <CR>
+
 
 "
 " NERDTree
