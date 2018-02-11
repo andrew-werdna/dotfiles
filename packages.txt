@@ -1,13 +1,12 @@
-#!/bin/bash
-
 # many of the packages here
-#     (e.g. python-software-properties, build-essential, curl, software-properties-common, apt-gransport-https, .etc)
+#     (e.g. python-software-properties, build-essential, curl, software-properties-common, apt-transport-https, .etc)
 #     are needed when using/installing other important packages
 # others
 #     (e.g. man, git, less, wget, tmux, .etc)
 #     are commonly used to get things done and are often missing from a base Docker image
 
-apt install -y \
+apt-get install -y \
+    vim \
     apt-utils \
     ssh \
     gcc \
@@ -26,4 +25,5 @@ apt install -y \
     lsb-release \
     ca-certificates \
     rsync \
+    tmux \
     build-essential
