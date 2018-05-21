@@ -10,26 +10,42 @@
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
+(require 'use-package)
+
+(setq use-package-always-ensure t)
 
 (setq user-full-name "Andrew Brown")
-
 (setq display-time-24hr-format t)
 (setq display-time-format "%H:%M - %d.%b.%y")
-(display-time-mode 1)
+(setq make-backup-files nil)
+(setq require-final-newline t)
 
+(display-time-mode 1)
 (display-battery-mode 1)
+
+(use-package markdown-mode)
+(use-package php-mode)
+(use-package web-mode)
+(use-package yaml-mode)
+
+(use-package zerodark-theme)
+(use-package evil)
+(use-package helm)
+(use-package dumb-jump)
+(use-package magit)
+(use-package neotree)
 
 (require 'evil)
 (evil-mode 1)
 
-(use-package zerodark-theme
-  :ensure t)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (evil zerodark-theme use-package))))
+ '(package-selected-packages
+   (quote
+    (neotree dumb-jump helm evil zerodark-theme yaml-mode web-mode php-mode markdown-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
