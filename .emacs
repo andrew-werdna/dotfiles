@@ -19,6 +19,7 @@
 (setq display-time-format "%H:%M - %d.%b.%y")
 (setq make-backup-files nil)
 (setq require-final-newline t)
+(global-linum-mode t)
 
 (display-time-mode 1)
 (display-battery-mode 1)
@@ -33,7 +34,7 @@
 (use-package helm)
 (use-package dumb-jump)
 (use-package magit)
-(use-package neotree)
+(use-package projectile)
 
 (require 'evil)
 (evil-mode 1)
@@ -45,7 +46,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (neotree dumb-jump helm evil zerodark-theme yaml-mode web-mode php-mode markdown-mode use-package))))
+    (projectile dumb-jump helm evil zerodark-theme yaml-mode web-mode php-mode markdown-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
