@@ -21,6 +21,9 @@
 (setq require-final-newline t)
 (global-linum-mode t)
 
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+;;(setq exec-path (append exec-path '("/usr/local/bin")
+
 (display-time-mode 1)
 (display-battery-mode 1)
 
@@ -28,6 +31,8 @@
 (use-package php-mode)
 (use-package web-mode)
 (use-package yaml-mode)
+(use-package js2-mode)
+(use-package typescript-mode)
 
 (use-package zerodark-theme)
 (use-package evil)
