@@ -1,0 +1,27 @@
+alias UPDATE="sudo apt update -y && sudo apt upgrade -y && sudo apt autoclean -y && sudo apt autoremove -y"
+
+export EDITOR='vim'
+
+export PATH=$PATH:/usr/local/bin
+
+# Golang executable setup
+gExecPath="/usr/local/go/bin"
+gExecInPath=`echo $PATH | grep -i "$gExecPath"`
+
+if [ $? -ne 0 ]; then
+	echo -e "\nfound go exec path $gExecPath, adding this folder to PATH\n"
+	export PATH=$PATH:"$gExecPath"
+else
+	echo -e "\n$gExecPath already found in PATH"
+fi
+
+# GOPATH setup
+gProjects="$HOME/go"
+goCheck=`env | grep -i GOPATH`
+if [ -d "$gProjects" ] && [ $? -ne 0 ]; then
+	echo -e "\n$gProjects found, exporting env var\n"
+	export GOPATH="$gProjcts"
+else
+	echo -e "\nGOPATH already exists\n"
+fi
+
