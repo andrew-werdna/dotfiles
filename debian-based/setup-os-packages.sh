@@ -10,3 +10,9 @@ ghUser="andrew-werdna"
 git config --global user.email "$ghUser@users.noreply.github.com"
 git config --global user.name `whoami`
 
+# install my current fav desktop for ubuntu-based regolith [desktop](https://regolith-linux.org/docs/getting-started/install/)
+sudo add-apt-repository ppa:regolith-linux/release
+
+sudo apt update -y
+
+sudo apt install -y regolith-desktop
