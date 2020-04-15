@@ -9,19 +9,16 @@ gExecPath="/usr/local/go/bin"
 gExecInPath=`echo $PATH | grep -i "$gExecPath"`
 
 if [ $? -ne 0 ]; then
-	echo -e "\nfound go exec path $gExecPath, adding this folder to PATH\n"
 	export PATH=$PATH:"$gExecPath"
-else
-	echo -e "\n$gExecPath already found in PATH"
 fi
 
 # GOPATH setup
 gProjects="$HOME/go"
-goCheck=`env | grep -i GOPATH`
+goCheck=`env | grep GOPATH`
 if [ -d "$gProjects" ] && [ $? -ne 0 ]; then
-	echo -e "\n$gProjects found, exporting env var\n"
 	export GOPATH="$gProjcts"
-else
-	echo -e "\nGOPATH already exists\n"
 fi
+
+# Go workspace setup
+mkdir -p $HOME/go/{src,pkg,bin}
 
