@@ -1,0 +1,41 @@
+!
+! urxvt color setup START
+!
+! special
+urxvt.foreground:   #8ca68c
+urxvt.background:   #131513
+urxvt.cursorColor:  #8ca68c
+
+! black
+urxvt.color0:       #131513
+urxvt.color8:       #687d68
+
+! red
+urxvt.color1:       #e6193c
+urxvt.color9:       #e6193c
+
+! green
+urxvt.color2:       #29a329
+urxvt.color10:      #29a329
+
+! yellow
+urxvt.color3:       #c3c322
+urxvt.color11:      #c3c322
+
+! blue
+urxvt.color4:       #3d62f5
+urxvt.color12:      #3d62f5
+
+! magenta
+urxvt.color5:       #ad2bee
+urxvt.color13:      #ad2bee
+
+! cyan
+urxvt.color6:       #1999b3
+urxvt.color14:      #1999b3
+
+! white
+urxvt.color7:       #8ca68c
+urxvt.color15:      #f0fff0
+
+! urxvt color setup END
