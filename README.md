@@ -2,9 +2,8 @@
 ## Steps
 - set up with GH
 - clone repo
-- `bash update-bashrc.sh`
+- `./dotfiles/setup.sh`
 - `source ~/.bashrc`
-- `bash setup-os-packages.sh`
 - copy vim/emacs setup to ~ if desired
 
 ## Setting Up GH
