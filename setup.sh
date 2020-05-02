@@ -51,4 +51,6 @@ makeGolangNeededDirectories
 gitConfig
 updateBashRc
 
+mkdir -p $HOME/.ssh
+
 exit 0
