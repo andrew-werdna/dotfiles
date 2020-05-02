@@ -16,16 +16,22 @@ function gitConfig() {
 # update .bashrc
 function updateBashRc() {
 
-	editorLine="export EDITOR=`which vim`";
-	grep $editorLine $HOME/.bashrc
+	editorLine="EDITOR=`which vim`";
+	throwAway=`grep $editorLine $HOME/.bashrc`
 	if [ $? -ne 0 ]; then
-		echo -e "\n$editorLine" >> $HOME/.bashrc
+		echo -e "\nexport $editorLine" >> $HOME/.bashrc
 	fi
 
-	pathLine="export PATH=\$PATH:$usrLocalBinPath";
-	grep $pathLine $HOME/.bashrc
+	pathLine="PATH=\$PATH:$usrLocalBinPath";
+	throwAway=`grep $pathLine $HOME/.bashrc || echo $PATH | grep $usrLocalBinPath`
 	if [ $? -ne 0 ]; then
-		echo "$pathLine" >> $HOME/.bashrc
+		echo "export $pathLine" >> $HOME/.bashrc
+	fi
+
+	goPathLine="GOPATH=$goProjectsPath"
+	goCheck=`env | grep GOPATH && grep $goPathLine $HOME/.bashrc`
+	if [ $? -ne 0 ]; then
+		echo "export $goPathLine" >> $HOME/.bashrc
 	fi
 
 }
@@ -33,18 +39,16 @@ function updateBashRc() {
 # golang related directories
 function makeGolangNeededDirectories() {
 
-	if [ -d $goExecPath ]; then
-		mkdir -p $goExecPath
+	sudoPath=`which sudo`
+	if [ $? -eq 0 ]; then
+		sudo mkdir -p $goExecPath
 	fi
-
-	if [ -d $goProjectsPath ]; then
-		mkdir -p $goProjectsPath
-	fi
+	mkdir -p $goProjectsPath/{src,pkg,bin}
 
 }
 
+makeGolangNeededDirectories
 gitConfig
 updateBashRc
-makeGolangNeededDirectories
 
 exit 0
