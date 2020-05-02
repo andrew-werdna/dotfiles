@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -f $1 ]; then
+if [ -f "$1" ]; then
 
 	eval $(ssh-agent -s)
 	ssh-add $1
