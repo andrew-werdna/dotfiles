@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# I use this on a fresh OS install to basically do a couple of things:
+# 	1.) create base directories realted to development with golang, and .ssh
+# 	2.) configure the global git details needed to start committing quickly
+# 	3.) update my bashrc with editor, update the path, and create GOPATH env variable
 usrLocalBinPath="/usr/local/bin"
 goExecPath="$usrLocalBinPath/go"
 goProjectsPath="$HOME/go"
