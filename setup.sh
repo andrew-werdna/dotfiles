@@ -7,11 +7,11 @@
 usrLocalBinPath="/usr/local/bin"
 goExecPath="$usrLocalBinPath/go"
 goProjectsPath="$HOME/go"
+ghUser="andrew-werdna"
 
 # config git
 function gitConfig() {
 
-	ghUser="andrew-werdna"
 	git config --global user.email "$ghUser@users.noreply.github.com"
 	git config --global user.name `whoami`
 
@@ -48,6 +48,7 @@ function makeGolangNeededDirectories() {
 		sudo mkdir -p $goExecPath
 	fi
 	mkdir -p $goProjectsPath/{src,pkg,bin}
+	mkdir -p $goProjectsPath/src/github.com/$ghUser
 
 }
 
