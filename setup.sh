@@ -57,5 +57,6 @@ gitConfig
 updateBashRc
 
 mkdir -p $HOME/.ssh
+mkdir -p $HOME/.config/{awesome,i3}
 
 exit 0
