@@ -183,7 +183,12 @@ bar {
         status_command SCRIPT_DIR=$HOME/i3blocks-contrib  i3blocks
 }
 
+exec --no-startup-id feh --bg-scale $HOME/Downloads/backgrounds/observers-of-space.jpg
 
-
-for_window [class=".*"] border pixel 0
-#exec gaps inner all set 20
+for_window [class=".*"] border pixel 2
+gaps inner 15
+gaps outer 10
+gaps top 0
+gaps bottom 0
+gaps left 0
+gaps right 0
