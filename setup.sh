@@ -19,7 +19,7 @@ function gitConfig() {
 
 # update .bashrc
 function updateBashRc() {
-
+	
 	editorLine="EDITOR=`which vim`";
 	throwAway=`grep $editorLine $HOME/.bashrc`
 	if [ $? -ne 0 ]; then
@@ -36,6 +36,12 @@ function updateBashRc() {
 	goCheck=`env | grep GOPATH && grep $goPathLine $HOME/.bashrc`
 	if [ $? -ne 0 ]; then
 		echo "export $goPathLine" >> $HOME/.bashrc
+	fi
+
+	termLine="TERMINAL=urxvt";
+	throwAway=`grep $termLine $HOME/.bashrc`
+	if [ $? -ne 0 ]; then
+		echo "export $termLine" >> $HOME/.bashrc
 	fi
 
 }
