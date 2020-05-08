@@ -35,10 +35,14 @@ markup=pango
 # The second parameter overrides the mixer selection
 # See the script for details.
 
+[go]
+interval=once
+label=
+
 #[volume]
 #label=♪
 #label=VOL
-#interval=once
+#interval=persist
 #signal=10
 #STEP=5%
 
@@ -81,12 +85,12 @@ interval=10
 
 [wifi]
 INTERFACE=wlp1s0
-label=wifi:
+label=WIFI  
 interval=10
 #separator=false
 
 [bandwidth2]
-label=UP DOWN
+label=UP DOWN  
 interval=persist
 
 # CPU usage
