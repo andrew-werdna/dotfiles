@@ -56,7 +56,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
-modules-center = battery date 
+modules-center = battery versions date 
 modules-right = filesystem xbacklight alsa memory cpu eth temperature
 ; xkeyboard wlan pulseaudio 
 
@@ -77,6 +77,11 @@ tray-padding = 2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/versions]
+type = custom/script
+exec = ~/.config/polybar/versions.sh
+interval = once
 
 [module/xwindow]
 type = internal/xwindow
@@ -218,11 +223,6 @@ format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
-
-[module/languages]
-type = custom/script
-exec = languages.sh
-interval = once
 
 [module/wlan]
 type = internal/network
