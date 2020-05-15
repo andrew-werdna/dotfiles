@@ -64,5 +64,6 @@ updateBashRc
 
 mkdir -p $HOME/.ssh
 mkdir -p $HOME/.config/{awesome,i3}
+mkdir -p $HOME/bin
 
 exit 0

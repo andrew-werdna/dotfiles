@@ -183,7 +183,7 @@ bindsym $mod+r mode "resize"
         #status_command SCRIPT_DIR=$HOME/i3blocks-contrib  i3blocks
 #}
 
-exec_always --no-startup-id $HOME/.fehbg
+exec_always --no-startup-id feh --bg-scale $HOME/Downloads/backgrounds/observers-of-space.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [class=".*"] border pixel 2

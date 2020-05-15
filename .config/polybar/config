@@ -219,6 +219,11 @@ format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
 label = %percentage_used%%
 
+[module/languages]
+type = custom/script
+exec = languages.sh
+interval = once
+
 [module/wlan]
 type = internal/network
 interface = wlp1s0
