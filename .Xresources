@@ -38,4 +38,6 @@ urxvt.color14:      #1999b3
 urxvt.color7:       #8ca68c
 urxvt.color15:      #f0fff0
 
+urxvt.font: xft:Anonymous Pro:size=16
+
 ! urxvt color setup END
