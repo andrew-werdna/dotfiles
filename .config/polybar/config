@@ -46,19 +46,19 @@ border-size = 4
 border-color = #00000000
 
 padding-left = 0
-padding-right = 2
+padding-right = 4
 
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
+font-0 = fixed:pixelsize=14;1
+font-1 = unifont:fontformat=truetype:size=12:antialias=false;0
+font-2 = siji:pixelsize=14;1
 
 modules-left = bspwm i3
-modules-center = battery versions date 
-modules-right = filesystem xbacklight alsa memory cpu eth temperature
-; xkeyboard wlan pulseaudio 
+modules-center =
+modules-right = battery date versions alsa memory cpu temperature
+; xkeyboard wlan pulseaudio filesystem xbacklight eth
 
 tray-position = right
 tray-padding = 2
