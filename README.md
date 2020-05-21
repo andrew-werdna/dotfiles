@@ -16,6 +16,3 @@ chown $USER ~/.ssh/config
 ## Installing NodeJS
 ### I like the [n tool](https://github.com/tj/n)
 
-## Installing Golang
-### I found [this](https://www.tecmint.com/install-go-in-linux/) easy to follow
-
