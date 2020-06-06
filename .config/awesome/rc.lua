@@ -48,7 +48,7 @@ end
 beautiful.init("/home/altair/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
