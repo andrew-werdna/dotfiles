@@ -189,13 +189,13 @@ bindsym $mod+p exec i3lock -i $HOME/dotfiles/backgrounds/observers-of-space.jpg
 #}
 
 
-exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/backgrounds/drifting.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/dotfiles/backgrounds/observers-of-space.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 for_window [class=".*"] border pixel 2
-gaps inner 15
-gaps outer 10
-gaps top 0
-gaps bottom 0
-gaps left 0
-gaps right 0
+#gaps inner 15
+#gaps outer 10
+#gaps top 0
+#gaps bottom 0
+#gaps left 0
+#gaps right 0
