@@ -7,9 +7,8 @@
 
 alias ls='ls --color=auto'
 
-export EDITOR=/usr/bin/vim
-export GOPATH=/home/altair/go
-export TERMINAL=urxvt
+export EDITOR=$(which vim)
+export GOPATH=/home/$USER/go
 export PATH=$HOME/bin:$PATH
 export GOPROJECTS=$GOPATH/src/github.com/andrew-werdna
 
